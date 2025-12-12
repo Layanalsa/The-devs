@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            font-family: "Tajawal", sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(to left, #0ea463, #0c8a55, #0c773c);
+            color: white;
+            padding: 22px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .grid-container {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            border: 1px solid #e4e4e4;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0c773c;
+            margin-bottom: 15px;
+            border-right: 5px solid #0c773c;
+            padding-right: 10px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafafa;
+            border: 1px solid #e4e4e4;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            width: 22px;
+            height: 22px;
+            accent-color: #0c773c;
+            cursor: pointer;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+            .field label {
+                font-size: 14px;
+                color: #333;
+            }
+
+            .field input, .field select, .field textarea {
+                padding: 10px 12px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                font-family: inherit;
+                font-size: 14px;
+                outline: none;
+                background: #fff;
+            }
+
+            .field textarea {
+                resize: vertical;
+                min-height: 70px;
+            }
+
+        .buttons-container {
+            width: 85%;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 48%;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .confirm {
+            background: #0c773c;
+            color: white;
+        }
+
+        .cancel {
+            background: #9b9b9b;
+            color: white;
+        }
+
+        .note {
+            width: 85%;
+            margin: 0 auto 16px;
+            color: #444;
+            font-size: 13px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">تفويض البيانات</div>
+
+    
+
+    <div class="grid-container">
+
+        <!-- الجهات الحكومية -->
+        <div class="card">
+            <div class="section-title">الجهات الحكومية</div>
+
+            <!-- صارت Radio (اختيار جهة واحدة فقط) -->
+            <label class="item"><span>وزارة الداخلية</span><input type="radio" name="authority" class="org" value="وزارة الداخلية"></label>
+            <label class="item"><span>وزارة العدل</span><input type="radio" name="authority" class="org" value="وزارة العدل"></label>
+            <label class="item"><span>وزارة التعليم</span><input type="radio" name="authority" class="org" value="وزارة التعليم"></label>
+            <label class="item"><span>وزارة الخارجية</span><input type="radio" name="authority" class="org" value="وزارة الخارجية"></label>
+        </div>
+
+        <!-- الوزارات -->
+        <div class="card">
+            <div class="section-title">الوزارات</div>
+
+            <label class="item"><span>وزارة الصحة</span><input type="radio" name="authority" class="org" value="وزارة الصحة"></label>
+            <label class="item"><span>وزارة المالية</span><input type="radio" name="authority" class="org" value="وزارة المالية"></label>
+            <label class="item"><span>وزارة الموارد البشرية</span><input type="radio" name="authority" class="org" value="وزارة الموارد البشرية"></label>
+        </div>
+
+        <!-- الشركات -->
+        <div class="card">
+            <div class="section-title">الشركات</div>
+
+            <label class="item"><span>سابك</span><input type="radio" name="authority" class="org" value="سابك"></label>
+            <label class="item"><span>أرامكو</span><input type="radio" name="authority" class="org" value="أرامكو"></label>
+            <label class="item"><span>شركة الكهرباء</span><input type="radio" name="authority" class="org" value="شركة الكهرباء"></label>
+        </div>
+
+        <!-- المستشفيات -->
+        <div class="card">
+            <div class="section-title">المستشفيات</div>
+
+            <label class="item"><span>مستشفى قوى الأمن</span><input type="radio" name="authority" class="org" value="مستشفى قوى الأمن"></label>
+            <label class="item"><span>مدينة الملك فهد الطبية</span><input type="radio" name="authority" class="org" value="مدينة الملك فهد الطبية"></label>
+            <label class="item"><span>مستشفى الملك فيصل التخصصي</span><input type="radio" name="authority" class="org" value="مستشفى الملك فيصل التخصصي"></label>
+        </div>
+
+        <!-- الجامعات -->
+        <div class="card">
+            <div class="section-title">الجامعات</div>
+
+            <label class="item"><span>جامعة حفر الباطن</span><input type="radio" name="authority" class="org" value="جامعة حفر الباطن"></label>
+            <label class="item"><span>جامعة الملك سعود</span><input type="radio" name="authority" class="org" value="جامعة الملك سعود"></label>
+            <label class="item"><span>جامعة الإمام</span><input type="radio" name="authority" class="org" value="جامعة الإمام"></label>
+            <label class="item"><span>جامعة طيبة</span><input type="radio" name="authority" class="org" value="جامعة طيبة"></label>
+        </div>
+
+        <!-- تأجير السيارات -->
+        <div class="card">
+            <div class="section-title">تأجير السيارات</div>
+
+            <label class="item"><span>بدجت</span><input type="radio" name="authority" class="org" value="بدجت"></label>
+            <label class="item"><span>يلو</span><input type="radio" name="authority" class="org" value="يلو"></label>
+            <label class="item"><span>افيس</span><input type="radio" name="authority" class="org" value="افيس"></label>
+            <label class="item"><span>ذيب</span><input type="radio" name="authority" class="org" value="ذيب"></label>
+        </div>
+
+    </div>
+
+    <!-- إعدادات التفويض -->
+    <div class="card" style="width:85%; margin: 0 auto 20px;">
+        <div class="section-title">إعدادات التفويض</div>
+
+        <div class="form-row">
+            <div class="field">
+                <label>مدة التفويض (بالأيام)</label>
+                <!-- بدون قيمة افتراضية -->
+                <input id="durationDays" type="number" min="1" max="365" placeholder="مثال: 30" />
+            </div>
+
+            <div class="field">
+                <label>نوع الوصول</label>
+                <!-- بدون اختيار افتراضي -->
+                <select id="accessType">
+                    <option value="" selected disabled>اختار نوع الوصول</option>
+                    <option>قراءة فقط</option>
+            
+                    <option>قراءة + مشاركة محدودة</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field" style="margin-top:12px;">
+            <label>سبب التفويض</label>
+            <!-- بدون نص افتراضي -->
+            <textarea id="purpose" placeholder="مثال: التحقق من أهلية المستفيد لخدمة محددة..."></textarea>
+        </div>
+
+        <div class="field" style="margin-top:12px;">
+            <label>البيانات المطلوبة</label>
+            <!-- هنا تبقى Checkboxes زي ما تبين -->
+            <div class="form-row">
+                <label class="item" style="margin:0;"><span>رقم الهوية</span><input type="checkbox" class="df" value="رقم الهوية"></label>
+                <label class="item" style="margin:0;"><span>تاريخ الميلاد</span><input type="checkbox" class="df" value="تاريخ الميلاد"></label>
+                <label class="item" style="margin:0;"><span>العنوان الوطني</span><input type="checkbox" class="df" value="العنوان الوطني"></label>
+                <label class="item" style="margin:0;"><span>رقم الجوال</span><input type="checkbox" class="df" value="رقم الجوال"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons-container">
+        <button class="btn confirm">تأكيد</button>
+        <button class="btn cancel" type="reset">إلغاء</button>
+    </div>
+
+</body>
+</html>
