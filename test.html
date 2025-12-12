@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تفويض الهويات - أبشر</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f3f5f7;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        /* الهيدر مثل أبشر */
+        .header {
+            background-color: #1a8b55;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* عنوان القسم */
+        .page-title {
+            margin: 25px 30px 10px;
+            font-size: 26px;
+            color: #1a8b55;
+            font-weight: bold;
+        }
+
+        /* كونتينر البطاقات */
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        /* --- الكارد الجديد الفاخر --- */
+        .card {
+            background: #f7f9fa;
+            /* رمادي أنيق */
+            border-radius: 14px;
+            padding: 24px 26px;
+            border: 1px solid #e2e6e9;
+            margin-bottom: 22px;
+
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+
+            /* ظل خفيف ممتاز */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+            /* حركة سموث */
+            transition: 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            background: #ffffff;
+        }
+
+        /* التشيك بوكس */
+        .checkbox {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            accent-color: #1a8b55;
+            margin-top: 5px;
+        }
+
+        /* عنوان الكارد */
+        .card-title {
+            font-size: 21px;
+            color: #1a8b55;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+        }
+
+        /* النصوص داخل كل كارد */
+        .info-item {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* زر أبشر */
+        .submit-btn {
+            width: 200px;
+            background: #1a8b55;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            transition: 0.2s ease-in-out;
+        }
+
+        .submit-btn:hover {
+            background: #157245;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- هيدر -->
+    <div class="header">
+        تفويض البيانات
+    </div>
+
+    <!-- عنوان -->
+    <div class="page-title">اختر البيانات التي ترغب بتفويضها</div>
+
+    <!-- البطاقات -->
+    <div class="container">
+
+        <!-- الهوية الوطنية -->
+        <div class="card">
+            <input type="checkbox" class="checkbox">
+            <div>
+                <div class="card-title">الهوية الوطنية</div>
+                <div class="info-item">الاسم: فرح النشار</div>
+                <div class="info-item">رقم الهوية: 1234567890</div>
+                <div class="info-item">تاريخ الميلاد: 2001/01/01</div>
+                <div class="info-item">تاريخ الانتهاء: 2030/01/01</div>
+            </div>
+        </div>
+
+        <!-- السيرة الذاتية -->
+        <div class="card">
+            <input type="checkbox" class="checkbox">
+            <div>
+                <div class="card-title">السيرة الذاتية</div>
+                <div class="info-item">التخصص: تقنية معلومات</div>
+                <div class="info-item">الجامعة: الأميرة نورة</div>
+                <div class="info-item">الخبرة: تطوير برمجيات – أمن سيبراني</div>
+                <div class="info-item">الشهادات: Unity – Security+ – Python</div>
+            </div>
+        </div>
+
+        <!-- رخصة القيادة -->
+        <div class="card">
+            <input type="checkbox" class="checkbox">
+            <div>
+                <div class="card-title">رخصة القيادة</div>
+                <div class="info-item">النوع: خصوصي</div>
+                <div class="info-item">تاريخ الإصدار: 2023/05/12</div>
+                <div class="info-item">تاريخ الانتهاء: 2033/05/12</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- زر التالي -->
+    <a href="authorize.html">
+        <button class="submit-btn">التالي</button>
+    </a>
+
+</body>
+
+</html>
